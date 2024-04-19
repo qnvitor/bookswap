@@ -838,3 +838,7 @@ section {
   color: var(--color-white);
 }
 
+#preview {
+  max-width: 90%;
+  padding-bottom: 1rem;
+}

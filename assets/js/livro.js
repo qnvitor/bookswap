@@ -1,11 +1,10 @@
-// Câmera
 var video = document.getElementById('preview');
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
 var captureButton = document.getElementById('capture');
 
 captureButton.addEventListener('click', function() {
-  navigator.mediaDevices.getUserMedia({ video: true })
+  navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } }) // Câmera traseira
     .then(function(stream) {
       video.srcObject = stream;
       video.style.display = 'block';
